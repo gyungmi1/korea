@@ -2,7 +2,8 @@ name: Deploy Korea site to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -18,23 +19,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
-      - name: Setup Node.js
+
+      # Vite 8 requires Node.js 20.19+ or 22.12+.
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.16.0
           cache: npm
-      - name: Setup Pages
+          cache-dependency-path: package-lock.json
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+
       - name: Install dependencies
-        run: npm ci
-      - name: Build
+        run: npm ci --no-audit --no-fund
+
+      - name: Build site
         run: npm run build
-      - name: Upload artifact
+
+      - name: Verify build output
+        run: |
+          test -f dist/index.html
+          test -f dist/404.html
+          echo "Build output verified:"
+          ls -lah dist
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
+
   deploy:
     environment:
       name: github-pages
