@@ -1,0 +1,104 @@
+{
+  "resolved": [
+    {
+      "family": "Inter",
+      "style": "Bold",
+      "font_style": "normal",
+      "font_weight": 700,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/Inter_1"
+      }
+    },
+    {
+      "family": "Inter",
+      "style": "Regular",
+      "font_style": "normal",
+      "font_weight": 400,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/Inter_1"
+      }
+    },
+    {
+      "family": "Noto Sans KR",
+      "style": "Bold",
+      "font_style": "normal",
+      "font_weight": 700,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/NotoSansKR-VF_2"
+      }
+    },
+    {
+      "family": "Noto Sans KR",
+      "style": "DemiLight",
+      "font_style": "normal",
+      "font_weight": 350,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/NotoSansKR-VF_2"
+      }
+    },
+    {
+      "family": "Noto Sans KR",
+      "style": "Medium",
+      "font_style": "normal",
+      "font_weight": 500,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/NotoSansKR-VF_2"
+      }
+    },
+    {
+      "family": "Noto Sans KR",
+      "style": "Regular",
+      "font_style": "normal",
+      "font_weight": 400,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/NotoSansKR-VF_2"
+      }
+    },
+    {
+      "family": "Noto Sans Gujarati",
+      "style": "Regular",
+      "font_style": "normal",
+      "font_weight": 400,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/NotoSansGujarati-VF_1"
+      }
+    },
+    {
+      "family": "Noto Serif KR",
+      "style": "Medium",
+      "font_style": "normal",
+      "font_weight": 500,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/NotoSerifKR-VF_3"
+      }
+    },
+    {
+      "family": "Noto Serif KR",
+      "style": "Regular",
+      "font_style": "normal",
+      "font_weight": 400,
+      "format": "woff2",
+      "location": {
+        "type": "url",
+        "value": "https://static.figma.com/font/NotoSerifKR-VF_3"
+      }
+    }
+  ],
+  "blocked": []
+}
