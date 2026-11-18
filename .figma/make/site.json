@@ -1,0 +1,13 @@
+{
+  "icons": {
+    "icon": "/korea/favicon.png"
+  },
+  "description": "Explore personalized skincare diagnostics, ingredient evidence, store locations, and customer support through a responsive beauty website.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
