@@ -3,6 +3,9 @@ import react from "@vitejs/plugin-react"
 import tailwindcss from "@tailwindcss/vite"
 import fs from "node:fs"
 import path from "node:path"
+import { fileURLToPath } from "node:url"
+
+const configDir = path.dirname(fileURLToPath(import.meta.url))
 
 import siteConfiguration from "./.figma/make/site.json"
 
@@ -28,7 +31,7 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./src"),
+        "@": path.resolve(configDir, "./src"),
       },
     },
     server: {
@@ -455,13 +458,13 @@ function figmaMakeKitPlugin(options: {
  */
 function figmaLinkedPackageSourcemaps(): Plugin {
   const packageJson = JSON.parse(
-    fs.readFileSync(path.resolve(__dirname, "package.json"), "utf8"),
+    fs.readFileSync(path.resolve(configDir, "package.json"), "utf8"),
   )
   const linkedPackages = Object.keys({
     ...packageJson.dependencies,
     ...packageJson.devDependencies,
   }).flatMap((name) => {
-    const installedDir = path.resolve(__dirname, "node_modules", name)
+    const installedDir = path.resolve(configDir, "node_modules", name)
     try {
       const realDir = fs.realpathSync(installedDir)
       return realDir.split(path.sep).includes("node_modules")
